@@ -1,3 +1,3 @@
 # ResumeBuilder
 
-Build Resume in few miniutes
+Build Resume in few miniutes. 
