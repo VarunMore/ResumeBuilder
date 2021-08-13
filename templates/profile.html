@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Resume/CV Design</title>
+	<link rel="stylesheet" href="{{url_for('static', filename='profile.css')}}">
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+</head>
+<body>
+
+<div class="resume">
+   <div class="resume_left">
+     <!-- <div class="resume_profile">
+       <img src="https://i.imgur.com/eCijVBe.png" alt="profile_pic">
+     </div> -->
+
+     <div class="resume_content">
+       <div class="resume_item resume_info">
+         <div class="title">
+          {% if Dict %}
+           <p class="bold">{{Dict.get("first_name")}} {{ Dict.get("last_name")}}</p>
+          
+           <p class="regular">{{Dict.get("job_title")}}</p>
+           {%endif%}
+         </div>
+         <ul>
+           <!-- <li>
+             <div class="icon">
+               <i class="fas fa-map-signs"></i>
+             </div>
+             <div class="data">
+               21 Street, Texas <br /> USA
+             </div>
+           </li> -->
+           <li>
+             <div class="icon">
+               <i class="fas fa-mobile-alt"></i>
+             </div>
+             {% if Dict %}
+             <div class="data">
+              {{Dict.get("phone_number")}}
+             </div>
+            {%endif%}
+           </li>
+           <li>
+             <div class="icon">
+               <i class="fas fa-envelope"></i>
+             </div>
+            {% if Dict %}
+             <div class="data">
+               {{Dict.get("email")}}
+             </div>
+            {% endif %}
+           </li>
+           <li>
+             <!-- <div class="icon">
+               <i class="fab fa-weebly"></i>
+             </div>
+             <div class="data">
+               www.stephen.com
+             </div> -->
+           </li>
+         </ul>
+       <!-- </div>
+       <div class="resume_item resume_skills">
+         <div class="title">
+           <p class="bold">skill's</p>
+         </div>
+         <ul>
+           <li>
+             <div class="skill_name">
+               HTML
+             </div>
+             <div class="skill_progress">
+               <span style="width: 80%;"></span>
+             </div>
+             <div class="skill_per">80%</div>
+           </li>
+           <li>
+             <div class="skill_name">
+               CSS
+             </div>
+             <div class="skill_progress">
+               <span style="width: 70%;"></span>
+             </div>
+             <div class="skill_per">70%</div>
+           </li>
+           <li>
+             <div class="skill_name">
+               SASS
+             </div>
+             <div class="skill_progress">
+               <span style="width: 90%;"></span>
+             </div>
+             <div class="skill_per">90%</div>
+           </li>
+           <li>
+             <div class="skill_name">
+               JS
+             </div>
+             <div class="skill_progress">
+               <span style="width: 60%;"></span>
+             </div>
+             <div class="skill_per">60%</div>
+           </li>
+           <li>
+             <div class="skill_name">
+               JQUERY
+             </div>
+             <div class="skill_progress">
+               <span style="width: 88%;"></span>
+             </div>
+             <div class="skill_per">88%</div>
+           </li>
+         </ul>
+       </div> -->
+       <div class="resume_item resume_social">
+         <div class="title">
+           <p class="bold">Social</p>
+         </div>
+         <ul>
+        
+           <li>
+             <div class="icon">
+               <i class="fab fa-twitter-square"></i>
+             </div>
+             {% if Dict %}
+             <div class="data">
+               <p class="semi-bold">Twitter</p>
+               <p>{{Dict.get("twitter")}}</p>
+             </div>
+             {% endif %}
+           </li>
+         
+           <li>
+             <div class="icon">
+               <i class="fab fa-linkedin"></i>
+             </div>
+             {% if Dict %}
+             <div class="data">
+               <p class="semi-bold">Linkedin</p>
+               <p>{{Dict.get("linked_in")}}</p>
+             </div>
+             {% endif %}
+           </li>
+         </ul>
+       </div>
+     </div>
+  </div>
+   </div>
+  <div class="resume_right">
+    <div class="resume_item resume_about">
+        <div class="title">
+      
+    <div class="resume_item resume_work">
+        <div class="title">
+           <p class="bold">Work Experience</p>
+         </div>
+        <ul>
+            <li>
+              {% if Dict %}
+                <div class="date">{{Dict.get("start_date")}} to {{Dict.get("end_date")}}</div> 
+              {% endif %}
+              {% if Dict %}
+                <div class="info">
+                  <p class="semi-bold">{{Dict.get("job_title")}} 
+                  </p> 
+                  <p>{{Dict.get("employer")}}</p> 
+              {% endif %}
+              {% if Dict %}
+                  <p>{{Dict.get("w_description")}}</p>
+                  <p>{{Dict.get("work_city")}}, {{Dict.get("work_state")}}</p>
+                </div>
+              {% endif %}
+            </li>
+            
+        </ul>
+    </div>
+    <div class="resume_item resume_work">
+        <div class="title">
+           <p class="bold">Projects</p>
+         </div>
+        <ul>
+            <li>
+              {% if Dict %}
+                <div class="date">{{Dict.get("project1_title")}} </div> 
+              {% endif %}
+              {% if Dict %}
+                <div class="info">
+                  <p>{{Dict.get("project1_description")}}</p>   
+              {% endif %}
+            </li>
+            <li>
+              {% if Dict %}
+                <div class="date">{{Dict.get("project2_title")}} </div> 
+              {% endif %}
+              {% if Dict %}
+                <div class="info">
+                  <p>{{Dict.get("project2_description")}} </p>   
+              {% endif %}
+            </li><li>
+              {% if Dict %}
+                <div class="date">{{Dict.get("project3_title")}} </div> 
+              {% endif %}
+              {% if Dict %}
+                <div class="info">
+                  <p>{{Dict.get("project3_description")}}</p>    
+              {% endif %}
+            </li>
+            
+        </ul>
+    </div>
+    <div class="resume_item resume_education">
+      <div class="title">
+           <p class="bold">Education</p>
+         </div>
+      <ul>
+            <li>
+              {% if Dict%}
+                <div class="date">{{Dict.get("college_degree")}} of {{Dict.get("field_of_study")}}</div> 
+                <div class="info">
+                <p>{{Dict.get("college_name")}}</p>
+                <!-- <div class="info">
+                     <p class="semi-bold">Web Designing (Texas University)</p> 
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatibus!</p>
+                </div> -->
+               </div>
+              {% endif %}
+            </li>
+            <li>
+              {% if Dict%}
+                <div class="date">{{Dict.get("highschool_degree")}} in ({{Dict.get("highschool_stream")}})</div> 
+                 <div class="info">
+                <p>{{Dict.get("highschool_name")}}</p>
+               
+                   <!--   <p class="semi-bold">Web Designing (Texas University)</p> 
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatibus!</p> -->
+                </div>
+              {% endif %}
+            </li>
+            <li>
+              {% if Dict%}
+                <div class="date">{{Dict.get("school_degree")}} </div> 
+                 <div class="info">
+                <p>{{Dict.get("school_name")}}</p>
+                <!-- <div class="info">
+                     <p class="semi-bold">Web Designing (Texas University)</p> 
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatibus!</p>
+                </div> -->
+                 </div>
+              {% endif %}
+            </li>
+        </ul>
+    </div>
+    <div class="resume_item resume_hobby">
+      <div class="title">
+           <p class="bold">Hobby</p>
+         </div>
+       <ul>
+         <li><i class="fas fa-book"></i></li>
+         <li><i class="fas fa-gamepad"></i></li>
+         <li><i class="fas fa-music"></i></li>
+         <li><i class="fab fa-pagelines"></i></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<button onclick="myprintfunc()">Print</button>
+<script type="text/javascript">
+  function myprintfunc(){
+            window.print();
+    }
+</script>
+</body>
+</html>
