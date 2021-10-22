@@ -24,7 +24,7 @@ mypthon\Scripts\activate
 ```
 MacOS
 ```bash
-mac ---"source mypython/bin/activate
+source mypython/bin/activate
 ```
 Now install requirements using 
 ```bash
