@@ -8,16 +8,17 @@ https://user-images.githubusercontent.com/73105729/138410693-3a2e15e0-4518-499b-
 ## Installation
 
 Environment Setup:
-after cloneing repo.
-install virtualenv using 
+After cloneing repo.
+Install virtualenv using 
 ```bash
 pip install virtualenv.
 ````
-create virtualenv using 
+Create virtualenv using 
 ```bash
 virtualenv env
 ```
-acitivate your virtualenv using 
+Acitivate your virtualenv using 
+
 Windows 
 ```bash
 mypthon\Scripts\activate
